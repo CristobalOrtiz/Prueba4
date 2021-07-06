@@ -1,0 +1,23 @@
+{% extends "includes/base.html" %}
+{% block body %}
+<div class="container">
+        <div class="row">
+            <h1>Rellena los siguientes campos por favor</h1>
+        </div>
+        <div class="row">
+            <div class="row">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+                        <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+                    </div>
+                </form>
+            </div>
+        </div>
+  </div>
+
+{% include "includes/footer.html" %}
+{% endblock %}
