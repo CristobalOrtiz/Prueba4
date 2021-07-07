@@ -1,5 +1,5 @@
 .jumbotron {
-    background-image: url(https://images6.alphacoders.com/345/thumb-1920-345001.jpg);
+    background-image: url(https://media.informabtl.com/wp-content/uploads/2017/09/proveedor.jpg);
     background-size: cover;
     height: 100%;
 }
@@ -72,4 +72,10 @@
 .derecha{
     
     right: 0px;
+}
+footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
 }
