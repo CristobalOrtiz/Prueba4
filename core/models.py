@@ -8,7 +8,7 @@ opciones_moneda = [
 
 class Formulario(models.Model):
     #numeroId = models.IntegerField()
-    thumbnail = models.ImageField()
+    #thumbnail = models.ImageField()
     nombre = models.CharField(max_length=100)
     telefono = models.CharField(max_length=12)
     direccion = models.CharField(max_length=100)

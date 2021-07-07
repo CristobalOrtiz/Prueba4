@@ -10,6 +10,31 @@
     <link rel="stylesheet" href="{% static 'core/estilo.css' %}">
 
     <title>{% block title %}SapaRaider{% endblock %}</title>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("#enviar").click(function()
+            {
+
+                $.get("http://127.0.0.1:8000/lista_formularios",
+                    function(data)
+                    {
+                        
+                        $.each(data,function(i,item)
+                        {
+                            $("#vehiculos").append("<tr><td>"+item.nombre+"</td><td>"+item.telefono +
+                            "</td><td>"+item.direccion+"</td><td>"+item.moneda+"</td></tr>");
+                            
+
+                        });
+
+                    });
+            });
+
+           
+        })
+    </script>
+
 </head>
 {% load static%}
 {% include "includes/nav.html" %}
